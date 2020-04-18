@@ -1,0 +1,179 @@
+body{
+	text-align: center;
+}
+.heading{
+	font-family: 'Baloo Bhaina 2', cursive;
+	font-size: 50px;
+	color: white;
+	font-weight: 800;
+}
+.maintitle{
+	color: #e62429;
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e62429; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #38E24A; 
+}
+#userinput, #nameinput{
+	width: 300px;
+}
+
+.ribbon {
+ font-size: 20px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #F6181E;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #e62429;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #C4151A transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+.text-input{
+	text-align: center;
+  position: relative;
+  width: 298px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-input{
+	width: 100%;
+	text-align: center;
+}
+  
+  input[type="text"]{
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 100px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"] + label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+    background: #E03616;
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
+  }
+  
+  input[type="text"]:focus + label{
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"]:focus{
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+  }
+.done{
+	text-decoration: line-through;
+}
+.list{
+	font-size: 20px;
+	font-weight: 400!important;
+	cursor:pointer;
+	margin-right: 63.266px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.space{
+	display: none;
+}
+.db{
+	 cursor: pointer;
+  border-radius: 5px;
+  background: #db0808;
+  position: absolute;
+  right: 6px;
+  border: none;
+  color: #fff;
+  margin-top: -8px;
+  padding: 8px;
+  transition: background 1s;
+  font-weight: bold;
+  outline: none;
+}
+.delete{
+	display: none!important;
+}
+@media only screen and (max-width: 1000px){
+	.space{
+		display: block;
+	}
+}
